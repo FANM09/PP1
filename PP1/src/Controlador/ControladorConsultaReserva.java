@@ -63,7 +63,7 @@ public class ControladorConsultaReserva implements ActionListener{
             modelo.addColumn("Estado");
             modelo.addColumn("Cedula");
             modelo.addColumn("IdSala");
-            int[] anchos = {50, 200, 200, 200, 150, 150,200,150,100,50};
+            int[] anchos = {50, 200, 200, 200, 150, 150,200,150,200,150};
             for (int i = 0; i < vista.tablaReservas.getColumnCount(); i++) {
                 vista.tablaReservas.getColumnModel().getColumn(i).setPreferredWidth(anchos[i]);
             }

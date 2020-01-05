@@ -51,15 +51,36 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="241" max="-2" attributes="0"/>
-                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="jLabel1" min="-2" pref="243" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                          <Component id="botonBuscar" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="chooseFecha" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtHoraInicio" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="txtHoraFin" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <Component id="txtCapacidad" min="-2" pref="85" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="chooseFecha" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <EmptySpace pref="10" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
+                  <Component id="botonBuscar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -73,9 +94,26 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane1" min="-2" pref="93" max="-2" attributes="0"/>
                       <Component id="botonBuscar" min="-2" max="-2" attributes="0"/>
-                      <Component id="chooseFecha" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="chooseFecha" min="-2" pref="31" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHoraInicio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHoraFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtCapacidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="436" max="32767" attributes="0"/>
+                  <EmptySpace pref="262" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -88,7 +126,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable1">
+            <Component class="javax.swing.JTable" name="tablaSalas">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="4" rowCount="4">
@@ -99,6 +137,9 @@
                   </Table>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -123,6 +164,39 @@
           </AuxValues>
         </Component>
         <Component class="rojeru_san.componentes.RSDateChooser" name="chooseFecha">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="HoraInicio:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtHoraInicio">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="HoraFin:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtHoraFin">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHoraFinActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Capacidad:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtCapacidad">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>

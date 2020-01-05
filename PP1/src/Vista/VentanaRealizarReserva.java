@@ -30,14 +30,20 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
     rSDateChooser1 = new rojeru_san.componentes.RSDateChooser();
     jPanel1 = new javax.swing.JPanel();
     jScrollPane1 = new javax.swing.JScrollPane();
-    jTable1 = new javax.swing.JTable();
+    tablaSalas = new javax.swing.JTable();
     jLabel1 = new javax.swing.JLabel();
     botonBuscar = new javax.swing.JButton();
     chooseFecha = new rojeru_san.componentes.RSDateChooser();
+    jLabel2 = new javax.swing.JLabel();
+    txtHoraInicio = new javax.swing.JTextField();
+    jLabel3 = new javax.swing.JLabel();
+    txtHoraFin = new javax.swing.JTextField();
+    jLabel4 = new javax.swing.JLabel();
+    txtCapacidad = new javax.swing.JTextField();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jTable1.setModel(new javax.swing.table.DefaultTableModel(
+    tablaSalas.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
         {null, null, null, null},
         {null, null, null, null},
@@ -48,7 +54,7 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
         "Title 1", "Title 2", "Title 3", "Title 4"
       }
     ));
-    jScrollPane1.setViewportView(jTable1);
+    jScrollPane1.setViewportView(tablaSalas);
 
     jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
     jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -61,6 +67,18 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
       }
     });
 
+    jLabel2.setText("HoraInicio:");
+
+    jLabel3.setText("HoraFin:");
+
+    txtHoraFin.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txtHoraFinActionPerformed(evt);
+      }
+    });
+
+    jLabel4.setText("Capacidad:");
+
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
     jPanel1Layout.setHorizontalGroup(
@@ -68,13 +86,28 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
         .addContainerGap()
         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(jPanel1Layout.createSequentialGroup()
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(76, 76, 76)
-            .addComponent(botonBuscar))
-          .addComponent(chooseFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(76, 76, 76))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jLabel2)
+                  .addComponent(jLabel3)
+                  .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(txtHoraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(txtHoraFin, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(txtCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+              .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(chooseFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(115, 115, 115)))
+        .addComponent(botonBuscar)
         .addContainerGap())
     );
     jPanel1Layout.setVerticalGroup(
@@ -86,8 +119,21 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(botonBuscar)
-          .addComponent(chooseFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(436, Short.MAX_VALUE))
+          .addGroup(jPanel1Layout.createSequentialGroup()
+            .addComponent(chooseFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+              .addComponent(jLabel2)
+              .addComponent(txtHoraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+              .addComponent(jLabel3)
+              .addComponent(txtHoraFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+              .addComponent(jLabel4)
+              .addComponent(txtCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addContainerGap(262, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +157,10 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
   private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_botonBuscarActionPerformed
+
+  private void txtHoraFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHoraFinActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_txtHoraFinActionPerformed
 
   public boolean validarDatos(){
     return chooseFecha.getDatoFecha()!=null;
@@ -155,9 +205,15 @@ public class VentanaRealizarReserva extends javax.swing.JFrame {
   public javax.swing.JButton botonBuscar;
   public rojeru_san.componentes.RSDateChooser chooseFecha;
   private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
+  private javax.swing.JLabel jLabel3;
+  private javax.swing.JLabel jLabel4;
   private javax.swing.JPanel jPanel1;
   private javax.swing.JScrollPane jScrollPane1;
-  private javax.swing.JTable jTable1;
   private rojeru_san.componentes.RSDateChooser rSDateChooser1;
+  public javax.swing.JTable tablaSalas;
+  public javax.swing.JTextField txtCapacidad;
+  public javax.swing.JTextField txtHoraFin;
+  public javax.swing.JTextField txtHoraInicio;
   // End of variables declaration//GEN-END:variables
 }

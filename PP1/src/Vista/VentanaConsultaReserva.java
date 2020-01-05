@@ -38,7 +38,7 @@ public class VentanaConsultaReserva extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
-    jLabel1.setText("Consulta Reserva");
+    jLabel1.setText("Consultar Reserva");
 
     jLabel2.setText("Carné:");
 
