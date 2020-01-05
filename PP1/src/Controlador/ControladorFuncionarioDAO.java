@@ -9,6 +9,7 @@ import Vista.VentanaLogin;
 import Vista.VentanaModificarSala;
 import Vista.VentanaRegistroEstudiante;
 import dao.UsuarioDAO;
+import Controlador.ControladorConsultaReserva;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -53,6 +54,8 @@ public class ControladorFuncionarioDAO implements ActionListener {
 
                 break;
             case "Consultar Reserva":
+              vista.setVisible(false);
+              ControladorConsultaReserva controladorConsultaReserva= new ControladorConsultaReserva();
 
                 break;
             case "Cancelar Reserva":
