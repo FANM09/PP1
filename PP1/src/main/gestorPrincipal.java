@@ -18,7 +18,7 @@ import mailer.Mail;
 public class gestorPrincipal {
 
     public static void main(String[] args) throws MessagingException {
-        Mail.enviarCorreo();
+        //Mail.enviarCorreo();
         Usuario modelo = new Usuario();
         VentanaLogin vista = new VentanaLogin();
         //AgregarSalaForm vista2 = new AgregarSalaForm();
