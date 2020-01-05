@@ -92,8 +92,18 @@ public class VentanaAgregarSala extends javax.swing.JFrame {
     }
 
     btAgregar.setText("Agregar");
+    btAgregar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btAgregarActionPerformed(evt);
+      }
+    });
 
     btSalir.setText("Regresar");
+    btSalir.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btSalirActionPerformed(evt);
+      }
+    });
 
     cbxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activa", "Inactiva", "Mantenimiento" }));
     cbxEstado.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +241,14 @@ public class VentanaAgregarSala extends javax.swing.JFrame {
   private void cbxEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxEstadoActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_cbxEstadoActionPerformed
+
+  private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_btSalirActionPerformed
+
+  private void btAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAgregarActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_btAgregarActionPerformed
 
     /**
      * @param args the command line arguments
